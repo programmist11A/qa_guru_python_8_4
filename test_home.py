@@ -1,6 +1,7 @@
 import random
 from math import pi
 
+
 def test_greeting():
     """
     Напишите программу, которая выводит на экран приветствие.
@@ -12,7 +13,10 @@ def test_greeting():
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
     print(output)
+
+
 test_greeting()
+
 
 def test_rectangle():
     """
@@ -29,8 +33,10 @@ def test_rectangle():
     # TODO сосчитайте площадь
     area = a * b
     assert area == 200
-    print(perimeter, area)
+
+
 test_rectangle()
+
 
 def test_circle():
     """
@@ -46,7 +52,10 @@ def test_circle():
     length = 2 * pi * r
     assert length == 144.51326206513048
     print(f"Длина его окружности = {length}")
+
+
 test_circle()
+
 
 def test_random_list():
     """
@@ -54,11 +63,13 @@ def test_random_list():
     """
 
     # TODO создайте список
-    l = sorted([random.randint(1, 101) for i in range(10)])
+    l = sorted([random.randint(1, 101) for _ in range(10)])
     assert len(l) == 10
     assert l[0] < l[-1]
-    print(l)
+
+
 test_random_list()
+
 
 def test_unique_elements():
     """
@@ -70,8 +81,10 @@ def test_unique_elements():
     assert isinstance(l, list)
     assert len(l) == 10
     assert l == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    print(l)
+
+
 test_unique_elements()
+
 
 def test_dicts():
     """
@@ -88,4 +101,6 @@ def test_dicts():
     assert isinstance(d, dict)
     assert len(d) == 5
     print(*d.values())
+
+
 test_dicts()
